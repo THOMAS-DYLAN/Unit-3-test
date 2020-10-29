@@ -84,7 +84,7 @@ p
     line-height: 1.4rem;
     margin-left: 15px;
     margin-right: 15px;
-    margin-left:15px;
+    margin-left: 15px;
     margin-bottom: 15px;
 }
 ul > nav.top
@@ -93,7 +93,7 @@ ul > nav.top
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: var(Nav-active);
+    background-color: var(--Nav-active);
 }
 a > ul > nav.top
 {
@@ -121,7 +121,7 @@ img > p > article:first-of-type
     margin-left: 50px;
     translate: 60px;
     rotate: 30;
-    box-shadow: var(--shadow) 10px -10px 30px;
+    box-shadow: var(--Shadow) 10px -10px 30px;
 }
 section > section.spotlight
 {
@@ -133,7 +133,7 @@ section > section.spotlight
 h1 > section.spotlight
 {
     font-size-adjust: 2.5rem;
-    color: var(Text-color);
+    color: var(--Text-color);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px;
     padding-top: 20px;
     padding-right: 15px;
@@ -157,11 +157,11 @@ p > section.spotlight
 }
 aside
 {
-    background-color: var(Text-background);
+    background-color: var(--Text-background);
 }
 a > aside
 {
-    color: var(Nav-active);
+    color: var(--Nav-active);
 }
 h1 > aside
 {
@@ -196,8 +196,8 @@ footer
 }
 nav.bottom
 {
-    background-color: var(Nav-active);
-    color: var(Text-color);
+    background-color: var(--Nav-active);
+    color: var(--Text-color);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -218,7 +218,7 @@ a > ul > nav.bottom
 }
 p > footer
 {
-    color: var(Text-color);
+    color: var(--Text-color);
     font-size: 0.9rem;
     text-align: center;
     background-color: black;
@@ -238,8 +238,8 @@ ul > nav.bottom
 {
     body
     {
-        background-color: var(Shadow);
-        color: var(Text-background);
+        background-color: var(--Shadow);
+        color: var(--Text-background);
     }
     aside
     {
@@ -324,7 +324,7 @@ ul > nav.bottom
     }
     a > p.links
     {
-        background-color: var(Nav-active);
+        background-color: var(--Nav-active);
         color: white;
         text-decoration: none;
         padding: 10px;
