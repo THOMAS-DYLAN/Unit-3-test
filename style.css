@@ -1,9 +1,12 @@
-var --Html-background = (246, 177, 177)
-var --Shadow = (51, 51, 51)
-var --Nav-active = (220, 27, 27)
-var --Spotlight = (171, 171, 171)
-var Text-background = (211, 211, 211)
-var Text-color = (111, 111, 111)
+:root
+{
+--Html-background: rgb(246, 177, 177);
+--Shadow: rgb(51, 51, 51);
+--Nav-active: rgb(220, 27, 27);
+--Spotlight: rgb(171, 171, 171);
+--Text-background: rgb(211, 211, 211);
+--Text-color: rgb(111, 111, 111);
+}
 /* =============================================
 Base styles used by All Screens DO NOT EDIT BELOW
 ============================================= */
@@ -65,12 +68,12 @@ body
     margin-right: auto;
     box-shadow: var(--Shadow) 10px 10px 25px, var(--Shadow) -10px 10px 25px;
 }
-header > body
+body header
 {
     background-color: white;
     width: 100%;
 }
-img.logoImage
+img#logoImage
 {
     display: block;
     width: 100%;
@@ -87,7 +90,7 @@ p
     margin-left: 15px;
     margin-bottom: 15px;
 }
-ul > nav.top
+nav.top ul 
 {
     margin-top: 10px;
     margin-left: 10px;
@@ -95,7 +98,7 @@ ul > nav.top
     margin-bottom: 10px;
     background-color: var(--Nav-active);
 }
-a > ul > nav.top
+nav.top ul a
 {
     color: white;
     display: block;
@@ -105,13 +108,14 @@ a > ul > nav.top
     padding-bottom: 5%;
     padding-left: 0%;
     padding-right: 0%;
+    justify-content: space-between;
 }
-a > ul > nav.top :hover
+nav.top ul a :hover
 {
     color: var(--Nav-active);
-    text-shadow: 0px 0px 2px black, 0px 0px 15px white;    ;
+    text-shadow: 0px 0px 2px black, 0px 0px 15px white;
 }
-img > p > article:first-of-type
+p img article
 {
     float: right;
     width: 45%;
@@ -123,14 +127,14 @@ img > p > article:first-of-type
     rotate: 30;
     box-shadow: var(--Shadow) 10px -10px 30px;
 }
-section > section.spotlight
+section.spotlight
 {
     background-color: var(--Spotlight);
     padding-bottom: 15px;
     overflow: auto;
 }
 
-h1 > section.spotlight
+section.spotlight h1
 {
     font-size-adjust: 2.5rem;
     color: var(--Text-color);
@@ -141,7 +145,7 @@ h1 > section.spotlight
     padding-left: 0px;
     text-align:right;
 }
-img > section.spotlight
+section.spotlight img
 {
     width: 35%;
     float: left;
@@ -151,7 +155,7 @@ img > section.spotlight
     margin-bottom: 10px;
     margin-left: 15px;
 }
-p > section.spotlight
+section.spotlight p
 {
     margin-bottom: unset;
 }
@@ -159,11 +163,11 @@ aside
 {
     background-color: var(--Text-background);
 }
-a > aside
+a  aside
 {
     color: var(--Nav-active);
 }
-h1 > aside
+aside h1
 {
     font-size: 2rem;
     font-weight: normal;
@@ -174,7 +178,7 @@ h1 > aside
     margin-left: 0px;
     margin-right: 0px;
 }
-img > aside
+aside img
 {
     display: block;
     width: 30%;
@@ -194,7 +198,7 @@ footer
 {
     width:100%;
 }
-nav.bottom
+nav#bottom
 {
     background-color: var(--Nav-active);
     color: var(--Text-color);
@@ -203,36 +207,34 @@ nav.bottom
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
 }
-li > ul > nav.bottom
+nav#bottom ul li
 {
     font-size: 1rem;
     line-height: 1.8rem;
 }
-a > ul > nav.bottom
+nav#bottom ul a
 {
     color: white;
 }
-p > footer
+footer p
 {
     color: var(--Text-color);
     font-size: 0.9rem;
     text-align: center;
     background-color: black;
-    margin: 0; 
+    margin: 0px; 
     padding-top: 10px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 10px;
 }
-ul > nav.bottom
+nav#bottom ul
 {
-    flex-shrink: 0.5;
-    flex-grow: 1;
-    max-width: 150px;
+    flex:150px 1 0.5;
 }
 @media(max-width: 480px)
 {
@@ -245,28 +247,28 @@ ul > nav.bottom
     {
         display: none;
     }
-    image > article
+    article img
     {
         display: none;
     }
-    img > section.spotlight
+    section.spotlight img
     {
         display: none;
     }
-    ul > nav.top
+    nav.top ul
     {
-        display: flexbox;
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
-    li > ul > nav.top
+    nav.top ul li
     {
         font-size: 2.2rem;
         flex-basis: 130px;
         flex-shrink: 1;
         flex-grow: 1;
     }
-    a > li > ul > nav.top
+    nav.top ul li a
     {
         padding-top: 50%;
         padding-bottom: 50%;
@@ -315,14 +317,14 @@ ul > nav.bottom
         background-repeat: no-repeat;
         background-position: center; 
     }
-    p.links
+    p#links
     {
-        display: flexbox;
+        display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-between;
     }
-    a > p.links
+    p.links a
     {
         background-color: var(--Nav-active);
         color: white;
@@ -335,7 +337,7 @@ ul > nav.bottom
 {
     body
     {
-        display: flexbox;
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
@@ -351,22 +353,22 @@ ul > nav.bottom
         flex-grow: 1;
         flex-shrink: 2;
     }
-    ul > nav.top
+    nav.top ul
     {
-        display: flexbox;
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        background-color: var(Shadow);
+        background-color: var(--Shadow);
         height: 50px;
         align-items: center center;
     }
-    li > ul > nav.top
+    nav.top ul li
     {
         flex-basis: 50px;
         flex-grow: 0;
         flex-shrink: 1;
     }
-    p.links
+    p.linkas
     {
         display: none;
     }
